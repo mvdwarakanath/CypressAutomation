@@ -86,9 +86,44 @@ input[attribute = 'value']
 
 Xpath Selector 
 --------------
+https://www.npmjs.com/package/cypress-xpath
+
+Command need to execute - npm install -D cypress-xpath
+
+Plugin which is supported - 
+1. ChroPath - 
+2. SelectorHub - https://chromewebstore.google.com/detail/selectorshub/ndgimibanhlabgdgjcpbbndiehljcpfh?hl=en
 
 
+Xpath is classified
 
+1. Relative Xpath - double slash - //*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
+
+2. Absolute Xpath - single slash - /html/body/div/div[1]/div[2]/div[2]/div/div[2]/div[1]/button
+
+
+Relative Xpath - 
+--------------
+
+Ways of creating Xpath - 
+
+1. Tag, Attribute and Value - //tag[@attribute = 'value']
+eg. //button[@type = 'button']
+    //button[normalize-space()='Add']
+
+2. Contains()
+//*[contains(@class,'oxd-text oxd-text--h5' )]
+
+3. Starts-with()
+//*[starts-with(@attribute,'value')]
+
+4. text()
+
+
+Entering keyboard button
+-----------------------
+
+https://docs.cypress.io/api/commands/type
 
 
 const app = window.top;
