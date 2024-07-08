@@ -43,16 +43,7 @@ var inputTextFiledLocator = '#inputfield';
 console.log("=================== PRINT NUMBER DIVISBLE BY 5 (1-100)==================")
 
 
-let l = 1
 
-for(l=0;l<=100;l++)
-    {
-
-        if(l%5==0)
-            {
-                console.log(l)
-            }
-    }
 
   /*  
 while(l<=100)

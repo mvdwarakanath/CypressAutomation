@@ -135,12 +135,50 @@ if (!app.document.head.querySelector("[data-hide-command-log-request]")) {
 }
 
 
+Assertion
+---------
+
+Implicit Assertion (built-in)
+ -should
+ -and
+
+Explicit Assertion 
+ -BDD - assert
+ -TDD - expect
+
+ https://docs.cypress.io/guides/references/assertions
 
 
+it method in cypress is having few methods
 
 
+Dropdown in Cypress
+-------------------
+
+Assignment - 1
+JavaScript Program to Calculate the Area of a Triangle
+JavaScript Program to Swap Two Variables
+JavaScript Program to Solve Quadratic Equation
+JavaScript Program to Convert Kilometers to Miles
+Javascript Program to Convert Celsius to Fahrenheit
+Javascript Program to Generate a Random Number
+Javascript Program to Check if a number is Positive, Negative, or Zero
+Javascript Program to Check if a Number is Odd or Even
+JavaScript Program to Find the Largest Among Three Numbers
+JavaScript Program to Check Prime Number
+JavaScript Program to Print All Prime Numbers in an Interval
+JavaScript Program to Find the Factorial of a Number
 
 
+Cypress Assignment
+------------------
+Application Link - https://demo.opencart.com/
+
+TestCase -
+#1 - Perform the Registration of new user by entering all the details 
+My Account > Register
+
+#2 - Perform the login in the Application with the same user and place order of any item
 
 
 
