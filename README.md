@@ -180,8 +180,48 @@ My Account > Register
 
 #2 - Perform the login in the Application with the same user and place order of any item
 
+Sample Application for Practice - 
+
+Dropdown Scenarios
+------------------
+
+https://testautomationpractice.blogspot.com/
+https://www.dummyticket.com/dummy-ticket-for-visa-application/
+https://www.wikipedia.org/
+https://www.zoho.com/commerce/free-demo.html
 
 
+<Select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mouse Operation
+
+Mouse Operations
+---------------
+
+1. Mouse Hover
+2. Double Click 
+3. Right Click
+4. Drag and Drop
+5. Scrolling 
+
+https://demo.opencart.com/. 
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3
+http://swisnl.github.io/jQuery-contextMenu/demo.html
+http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+https://scroll.in/tag/Swiggy
 
 
 
