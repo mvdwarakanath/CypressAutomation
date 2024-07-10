@@ -192,22 +192,6 @@ https://www.zoho.com/commerce/free-demo.html
 
 
 <Select>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Mouse Operation
-
 Mouse Operations
 ---------------
 
@@ -218,6 +202,7 @@ Mouse Operations
 5. Scrolling 
 
 https://demo.opencart.com/. 
+https://tutorialsninja.com/demo/
 https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick3
 http://swisnl.github.io/jQuery-contextMenu/demo.html
 http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html

@@ -26,7 +26,7 @@ describe('Select Dropdown', ()=>{
 
     })
 
-    it.only('Dynamic Dropdown', function(){
+    it('Dynamic Dropdown', function(){
 
         cy.visit('https://www.google.com/')
 
@@ -46,8 +46,28 @@ describe('Select Dropdown', ()=>{
 
             })
             
-
         })
+        it.only('AutoSuggestive', function(){
+
+            cy.visit('https://www.wikipedia.org/')
+
+            cy.get('#searchInput').type('Delhi')
+
+            cy.get('.suggestion-link').contains('Delhi Metro').click()
+       
+            cy.visit('https://www.wikipedia.org/')
+
+            cy.get('#searchInput').type('Delhi')
+
+            //cy.get('.suggestion-link').first().click()
+            
+            //cy.get('.suggestion-link').last().click()
+
+            cy.get('.suggestion-link').eq(3).click()
+
+            })
+
+
 
 
     })
