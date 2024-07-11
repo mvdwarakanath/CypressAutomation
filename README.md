@@ -208,6 +208,10 @@ http://swisnl.github.io/jQuery-contextMenu/demo.html
 http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
 https://scroll.in/tag/Swiggy
 
+Alerts in Cypress
+-----------------
+
+
 
 
 

@@ -37,7 +37,7 @@ describe('Mouse Hover Operations', ()=>{
     
     })
 
-    it.only('Drag and Drop Scenario', ()=>{
+    it('Drag and Drop Scenario', ()=>{
 
         cy.visit('http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html')
 
@@ -49,4 +49,12 @@ describe('Mouse Hover Operations', ()=>{
 
     })
 
+    it.only('Scrolling feature',()=>{
+        cy.visit('https://scroll.in/tag/Swiggy')
+        cy.pause()
+        //cy.wait()
+        cy.get('.search-next').scrollIntoView(({duration:2000}))
+
+    })
+    
 })
