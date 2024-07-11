@@ -38,7 +38,7 @@ describe('Handle Alerts in Cypress',()=>{
 
         cy.get("[onclick='jsConfirm()']").click()
 
-        cy.on('window:confirm', (r)=>{
+        cy.on('', (r)=>{
 
             expect(r).to.contain('I am a JS Confirm')
         })
