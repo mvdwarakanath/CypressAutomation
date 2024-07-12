@@ -210,6 +210,27 @@ https://scroll.in/tag/Swiggy
 
 Alerts in Cypress
 -----------------
+Ref URL - https://the-internet.herokuapp.com/javascript_alerts
+
+JS Alert
+JS Confirm
+JS Prompt Window
+Authenticated Popup
+
+Navigation Commands
+-------------------
+
+cy.go commands
+cy.go with Numberic 
+
+
+Viewport Commands 
+-----------------
+Cross Browser Testing
+Browserstack
+SauceLabs
+
+Ref URL - https://docs.cypress.io/api/commands/viewport
 
 
 

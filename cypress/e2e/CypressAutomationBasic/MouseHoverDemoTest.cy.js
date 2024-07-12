@@ -51,9 +51,10 @@ describe('Mouse Hover Operations', ()=>{
 
     it.only('Scrolling feature',()=>{
         cy.visit('https://scroll.in/tag/Swiggy')
-        cy.pause()
+        //cy.pause()
         //cy.wait()
-        cy.get('.search-next').scrollIntoView(({duration:2000}))
+        cy.scrollTo('bottom')
+        //cy.get('.search-next').scrollIntoView(({duration:2000}))
 
     })
     

@@ -50,7 +50,7 @@ describe('Handle Alerts in Cypress',()=>{
     })
 
 
-    it.only('JS Prompt Window',()=>{
+    it('JS Prompt Window',()=>{
 
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
 
@@ -65,17 +65,30 @@ describe('Handle Alerts in Cypress',()=>{
         cy.get("[onclick='jsPrompt()']").click()
         
         //cy.on('window:alert',()=> false);
-
         //cy.get('#result').should('have.text','')
-        
-        
-       // cy.get("[onclick='jsPrompt()']").click()
+        // cy.get("[onclick='jsPrompt()']").click()
 
        
 
         //cy.on('window:confirm',()=>false); //This is only for clicking on cancel/dismiss button
 
        // cy.get('#result').should('have.text','You clicked: Cancel')
+
+    })
+
+
+    it.only('Authentication Popup',()=>{
+        // Approach 1
+            /* cy.visit('https://the-internet.herokuapp.com/basic_auth', {auth: {
+            username: 'admin',
+            password: 'admin'} }) */
+
+            //Approach 2
+            cy.visit('https://admin:admin@the-internet.herokuapp.com/basic_auth')
+
+            //admin:admin123@staging.com
+            
+        
 
     })
 })
