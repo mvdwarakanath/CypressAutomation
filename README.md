@@ -172,7 +172,7 @@ JavaScript Program to Find the Factorial of a Number
 
 Cypress Assignment
 ------------------
-Application Link - https://demo.opencart.com/
+Application Link - https://tutorialsninja.com/
 
 TestCase -
 #1 - Perform the Registration of new user by entering all the details 
@@ -231,6 +231,63 @@ Browserstack
 SauceLabs
 
 Ref URL - https://docs.cypress.io/api/commands/viewport
+
+
+To configure Diff environment - 
+
+
+const { defineConfig } = require('cypress')
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+
+      const version = config.env.VERSION || 'local'
+
+      const urls = {
+        local: "http://localhost:3000",
+        staging: "https://staging.example.com",
+        prod: "https://example.com"
+      }
+
+      // choosing version from urls object
+      config.baseUrl = urls[version]
+
+      return config
+    },
+  },
+})
+
+
+
+
+# will use http://localhost:3000
+npx cypress open --env version="local"
+# will use http://staging.example.com
+npx cypress open --env version="staging"
+# will use http://example.com
+npx cypress open --env version="prod"
+# will use fallback to http://localhost:3000
+npx cypress open 
+
+RadioButton and Checkbox 
+------------------------
+URL - https://testautomationpractice.blogspot.com/
+
+type = 'radio'
+type = 'checkbox'
+
+Hooks 
+------
+
+after
+before
+afterEach
+beforeEach
+
+Pre-requiste - Test Data Creation, Clearing Cookies, Setting up the DB, Clearing cache 
+
+Cleanup Activity - Data cleanup, close the browser, Redirect to home 
 
 
 
