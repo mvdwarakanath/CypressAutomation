@@ -1,0 +1,13 @@
+{
+    "productDetails1":[
+        {
+            "product": "laptop"
+        },
+        {
+            "product": "mobile"
+        },
+        {
+            "product": "shoes"
+        }
+    ] 
+}

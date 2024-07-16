@@ -290,6 +290,14 @@ Pre-requiste - Test Data Creation, Clearing Cookies, Setting up the DB, Clearing
 Cleanup Activity - Data cleanup, close the browser, Redirect to home 
 
 
+Tables
+-------
+
+Application URL - https://demo3x.opencartreports.com/admin/
+
+
+
+
 
 
 
