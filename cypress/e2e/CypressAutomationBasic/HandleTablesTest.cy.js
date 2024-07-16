@@ -10,8 +10,13 @@ beforeEach('Login', ()=>{
     cy.get('#input-username').type('demo')
     cy.get('#input-password').type('demo')
     cy.get("button[type='submit']").click()
-    cy.get('#menu-customer>a').click()
-    cy.get('#menu-customer>ul>li:first-child').click()
+    
+    cy.get('#menu-sale>a').click()
+    cy.get("#menu-sale>ul>li:first-child").click()
+
+    
+    //cy.get('#menu-customer>a').click()
+    //cy.get('#menu-customer>ul>li:first-child').click()
 
 })
 
@@ -48,7 +53,7 @@ it('Check the data present in specific row and specific cell',()=>{
 
 })
 
-it.only('Read all the data which is present on the web table', ()=>{
+it('Read all the data which is present on the web table', ()=>{
 
 
     cy.get("table[class='table table-bordered table-hover']>tbody>tr")
@@ -71,9 +76,60 @@ it.only('Read all the data which is present on the web table', ()=>{
 
 })
 
-it('Pagination',()=>{
+it.only('Pagination',()=>{
 
-    
+    cy.get(".col-sm-6.text-right").then((ele)=>{
+
+        let pageCount
+        let myText = ele.text() //Showing 1 to 20 of 26 (2 Pages)
+        // 5 Pages
+        // myText.trim(" ")
+        //myText = myText.indexOf("Pages"-1)
+        pageCount = myText.substring(myText.indexOf("(")+1, myText.indexOf("Pages")-1);
+        cy.log(pageCount)
+
+
+        cy.get("table[class='table table-bordered table-hover']>tbody>tr")
+                        .each(($row, index, $rows)=>{
+
+                            cy.wrap($row).within(()=>{
+
+                                cy.get('td:nth-child(3)').then((e)=>{
+
+                                    cy.log(e.text())
+                                })
+                            })
+                        })
+
+        for(let p = 2; p<=2; p++)
+            {
+                if(pageCount>1)
+                    {
+                        cy.scrollTo('bottom')
+
+                        cy.wait(3000)
+                        cy.get(".pagination > li:nth-child("+p+") > a", {force: true} ).click();
+
+                        cy.wait(3000)
+                        cy.get("table[class='table table-bordered table-hover']>tbody>tr")
+                        .each(($row, index, $rows)=>{
+
+                            cy.wrap($row).within(()=>{
+
+                                cy.get('td:nth-child(3)').then((e)=>{
+
+                                    cy.log(e.text())
+                                })
+                            })
+                        })
+                    
+                    }
+            }
+    })
+
+
+
+
 })
 
 
