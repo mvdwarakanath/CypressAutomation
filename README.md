@@ -296,6 +296,19 @@ Tables
 Application URL - https://demo3x.opencartreports.com/admin/
 
 
+Cypress Handling Multiple Tab or Windows
+---------------------------------------
+
+
+
+
+Handling Custom Commands in Cypress
+-----------------------------------
+
+
+
+
+
 
 
 

@@ -29,3 +29,26 @@ import 'cypress-iframe';
 
 require('@4tw/cypress-drag-drop')
 
+
+Cypress.Commands.add('loginOrangeHrms', (email, password) => { 
+    
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.get("input[placeholder='Username']").type(email);
+    cy.get("input[placeholder='Password']").type(password);
+
+    cy.get("button[type='submit']").click();
+
+
+
+ })
+
+ Cypress.Commands.add('verifyTextContain',(locator, textValue)=>{
+    cy.get(locator).should('have.text', textValue)
+ })
+
+ 
+ Cypress.Commands.add('verifyTextContainByXpath',(locator, textValue)=>{
+    cy.xpath(locator).should('have.text', textValue)
+ })
+
+ //cy.verifyTextContain('locator','23')
