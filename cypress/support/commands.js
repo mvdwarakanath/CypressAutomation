@@ -46,9 +46,11 @@ Cypress.Commands.add('loginOrangeHrms', (email, password) => {
     cy.get(locator).should('have.text', textValue)
  })
 
- 
+
  Cypress.Commands.add('verifyTextContainByXpath',(locator, textValue)=>{
     cy.xpath(locator).should('have.text', textValue)
  })
 
  //cy.verifyTextContain('locator','23')
+
+ import 'cypress-file-upload';

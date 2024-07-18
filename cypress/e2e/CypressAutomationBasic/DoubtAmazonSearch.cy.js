@@ -4,7 +4,7 @@ describe('Amazon search Suits',()=>
         it('Amazon search Test',()=>
         {
             cy.visit('https://www.amazon.in/')
-            cy.get('#twotabsearchtextbox').type('Apple iPhone 13 (128GB) - Midnight')
+            cy.get('#twotabsearchtextbox',{force:true}).type('Apple iPhone 13 (128GB) - Midnight')
             cy.get('#nav-search-submit-button').click()
             //cy.get('.a-size-medium.a-color-base.a-text-normal').click()
             cy.get('.a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2 > a').each(($e1, index, $list)=>

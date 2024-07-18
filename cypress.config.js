@@ -5,7 +5,7 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
 
-      const version = config.env.VERSION || 'local'
+      const version = config.env.VERSION || 'prod'
 
       const urls = {
         local: "http://localhost:3000",

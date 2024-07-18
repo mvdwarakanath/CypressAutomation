@@ -1,5 +1,5 @@
 import {productDetails} from '../../fixtures/productDetails.json';
-
+//import {productDetails} from '../../'
 describe("loading and accessing fixtures", ()=>{
   
     it("should access the data from the fixture", ()=> {
@@ -7,7 +7,8 @@ describe("loading and accessing fixtures", ()=>{
 
             cy.visit('https://www.google.com/');
             cy.get("textarea[name='q']").clear();
-            cy.get("textarea[name='q']").type(items.product);
+            cy.get("textarea[name='q']").type(items.product).type('{enter}');
+            cy.wait(3000)
             cy.log(items.product);
             cy.log(items.category);
         })
