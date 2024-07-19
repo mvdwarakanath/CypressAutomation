@@ -54,3 +54,11 @@ Cypress.Commands.add('loginOrangeHrms', (email, password) => {
  //cy.verifyTextContain('locator','23')
 
  import 'cypress-file-upload';
+ const XLSX = require('xlsx');
+ Cypress.Commands.add('readExcel', (filePath, sheetName) => {
+    return cy.readFile(filePath, 'binary').then((fileContent) => {
+      const workbook = XLSX.read(fileContent, { type: 'binary' });
+      const worksheet = workbook.Sheets[sheetName];
+      return XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+    });
+  });
