@@ -306,6 +306,13 @@ Handling Custom Commands in Cypress
 -----------------------------------
 
 
+Reading the Values from Excel
+----------------------------
+
+
+Step 1 - npm install xlsx
+Step 2 - npm install convert-excel-to-json
+
 
 
 

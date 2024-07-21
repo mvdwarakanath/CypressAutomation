@@ -1,12 +1,60 @@
 const { defineConfig } = require("cypress");
+const csv = require('@fast-csv/parse')
 
 const {XLSX} = require("xlsx");
-
+const xlsx = require("node-xlsx").default
+const fs = require('fs');
+const path = require('path');
 module.exports = defineConfig({
-  
+
   watchForFileChanges:false,
   e2e: {
     setupNodeEvents(on, config) {
+
+      on('task',{
+
+        readFromCsv()
+        {
+          return new Promise(resolve =>{
+
+            let dataArray = [];
+            csv.parseFile("./myCsv.csv", {headers:true})
+            .on('data',(data) =>{
+              dataArray.push(data);
+            })
+            .on('end', ()=>{
+              resolve(dataArray)
+            })
+          })
+
+        }
+
+        
+
+      })
+
+
+
+
+
+
+
+
+      on('task', { parseXlsx({filePath})
+      { 
+        return new Promise((resolve, reject) =>
+        {
+          try
+          {
+            const jsonData = xlsx.parse(fs.readFileSync(filePath));
+            resolve(jsonData);
+          } catch(e)
+          {
+            reject(e);
+          } });
+
+
+        }});
 
       on('task', {
         convertXlsxToJson(filePath)

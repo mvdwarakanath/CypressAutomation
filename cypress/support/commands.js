@@ -51,8 +51,16 @@ Cypress.Commands.add('loginOrangeHrms', (email, password) => {
     cy.xpath(locator).should('have.text', textValue)
  })
 
- //cy.verifyTextContain('locator','23')
 
+
+ Cypress.Commands.add("parseXlsx", (inputFile) =>{
+
+   return cy.task('parseXlsx', {filePath: inputFile})
+
+ });
+
+ 
+ //cy.verifyTextContain('locator','23')
  import 'cypress-file-upload';
  const XLSX = require('xlsx');
  Cypress.Commands.add('readExcel', (filePath, sheetName) => {
