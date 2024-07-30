@@ -1,6 +1,5 @@
 class Login{
 
-    
     clickOnLoginButton(email, password)
     {
         cy.get("input[placeholder='Username']").type(email);
@@ -8,7 +7,6 @@ class Login{
     
         cy.get("button[type='submit']").click();
     }
-
     clickOnFacebook()
     {
 

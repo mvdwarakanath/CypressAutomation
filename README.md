@@ -316,14 +316,52 @@ Step 2 - npm install convert-excel-to-json
 
 
 
+API Testing Basics 
+------------------
+API - Application Programming Interface
+Backend Testing / Microservices / MS
+
+Pet MS -
+  - getPet
+  - postPet
+  - putPet
+
+API Method - 
+----------
+  - GET - 
+  - POST - CREATING A NEW ENTRY IN DB - RECORD -- 200/201 - PAYLOAD - XML, JSON, HTML, GRAPHQL
+  - PUT
+  - PATCH
+  - DELETE
+
+API Status Code - 
+---------------
+  - 1XX
+  - 2XX
+  - 3XX
+  - 4XX
+  - 5XX
+
+APIs - 
+----
+Hotel --------> Order Food ----------> Food is being served
+
+Hotel -----> Waiter ------> Cook
+
+Frontend App ------> APIs  -------> Backend
+
+Backend ------> Response ---------> Frontend App
 
 
+Authentication and Authorization (403 Forbidden)
+
+- Login - UN/PS
 
 
-
-
-
-
+- Bearer Token
+- OATH 1.0
+- OATH 2.0
+- Tokenization
 
 
 
