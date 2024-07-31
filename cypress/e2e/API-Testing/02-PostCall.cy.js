@@ -4,7 +4,7 @@ describe('Different ways to create POST Call', ()=>{
 
     const bodyValue = {
         name: faker.person.firstName(),
-        job:faker.person.jobArea()
+        job:faker.person.jobArea(),
     }
 
     it('HTTP Request - POST call', ()=>{
