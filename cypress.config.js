@@ -7,9 +7,23 @@ const fs = require('fs');
 const path = require('path');
 module.exports = defineConfig({
 
+  
+  reporter: 'cypress-mochawesome-reporter',
+
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: 'Cypress Testing Report',
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+    ignoreVideos:false
+  },
+
   watchForFileChanges:false,
+  video:true,
   e2e: {
     setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
 
       on('task',{
 

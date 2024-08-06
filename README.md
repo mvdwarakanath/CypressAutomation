@@ -367,8 +367,35 @@ Authentication and Authorization (403 Forbidden)
 Cypress Reporter
 ----------------
 
+https://www.npmjs.com/package/cypress-mochawesome-reporter
 
+https://docs.cypress.io/plugins
 
+Step 1 - 
+
+npm i --save-dev cypress-mochawesome-reporter
+
+Step 2 - 
+
+Add to cypress/support/e2e.js
+
+import 'cypress-mochawesome-reporter/register';
+
+Step 3 - 
+
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
+  e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
+  },
+});
+
+Cypress Cloud
+-------------
 
 
 
