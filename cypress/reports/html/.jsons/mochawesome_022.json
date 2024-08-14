@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-14T15:46:39.008Z",
+    "end": "2024-08-14T15:46:39.240Z",
+    "duration": 232,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "40e0c447-096e-414c-b718-2e1689cc6c6c",
+      "title": "",
+      "fullFile": "cypress/e2e/API-Testing/04-DisplayOutput.cy.js",
+      "file": "cypress/e2e/API-Testing/04-DisplayOutput.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c7f44f11-9361-4aa8-85b9-ab99bbb98227",
+          "title": "API Testing with Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should log API response",
+              "fullTitle": "API Testing with Cypress should log API response",
+              "timedOut": null,
+              "duration": 197,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress/e2e/API-Testing/04-DisplayOutput.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"/API-Testing/04-DisplayOutput.cy.js/API Testing with Cypress -- should log API response (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "// Intercept the API request\ncy.intercept('GET', 'https://jsonplaceholder.typicode.com/posts/1').as('getRequest');\n// Trigger the request\n// UI PART - cy.visit('/your-page'); // Adjust according to your test setup\n// Wait for the request and then log the response\ncy.get('@getRequest').then(interception => {\n  const apiResponse = interception.response.body;\n  // Log to the console\n  console.log('API Response:', apiResponse);\n});",
+              "err": {
+                "message": "TypeError: Cannot read properties of null (reading 'response')",
+                "estack": "TypeError: Cannot read properties of null (reading 'response')\n    at Context.eval (webpack:///./cypress/e2e/API-Testing/04-DisplayOutput.cy.js:11:41)",
+                "diff": null
+              },
+              "uuid": "50d450a0-c7d3-4758-998f-2b48012076c1",
+              "parentUUID": "c7f44f11-9361-4aa8-85b9-ab99bbb98227",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "50d450a0-c7d3-4758-998f-2b48012076c1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 197,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Testing Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "ignoreVideos": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

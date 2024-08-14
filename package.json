@@ -2,7 +2,9 @@
   "scripts": {
     "test": "npx cypress run",
     "cy:run": "node cypress/scripts/runWithHtmlReport.js",
-    "test:chrome": "npx cypress run --spec cypress/e2e/CypressAutomationBasic/XpathDemoTest.cy.js --browser chrome"
+    "test:chrome": "npx cypress run --spec cypress/e2e/CypressAutomationBasic/XpathDemoTest.cy.js --browser chrome",
+    "test:edge": "npx cypress run --spec cypress/e2e/CypressAutomationBasic/XpathDemoTest.cy.js --browser edge"
+
   },
   "dependencies": {
     "convert": "^5.3.0",
