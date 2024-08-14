@@ -32,7 +32,7 @@ describe('Assertion Demo', ()=>{
         cy.get('.oxd-alert-content > .oxd-text').should('have.text','Invalid credentials')
     })
 
-    it.only('Explicit Assertion', ()=>{
+    it('Explicit Assertion', ()=>{
 
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
@@ -47,7 +47,7 @@ describe('Assertion Demo', ()=>{
         let amount = 
 
         cy.get('.oxd-userdropdown-name').then((x)=>{
-            let actualDropdownName = x.texts()
+            let actualDropdownName = x.text()
             //BDD Style
             expect(actualDropdownName).to.equal(expDropdownName)
             expect(actualDropdownName).to.not.equal(expDropdownName)

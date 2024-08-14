@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 module.exports = defineConfig({
 
-  
+  projectId:'utfwwf',
   reporter: 'cypress-mochawesome-reporter',
 
   reporterOptions: {

@@ -398,6 +398,9 @@ Cypress Cloud
 -------------
 
 
+Cypress Github Actions - YML Files 
+
+https://github.com/cypress-io/github-action?tab=readme-ov-file#parallel
 
 
 

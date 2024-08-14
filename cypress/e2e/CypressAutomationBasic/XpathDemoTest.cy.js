@@ -13,3 +13,15 @@ describe('Cypress Xpath Support', ()=>{
     })
 
 })
+
+
+//Payment
+//7 TCs
+//Paymethod
+//8 TCs
+//Merchant
+//10 TCs
+
+// /Users/vikasbhandari/Documents/GitHub/CypressAutomation/cypress
+//Jenkins
+//Ask to Run in Which Browser - Chrome, edge, 

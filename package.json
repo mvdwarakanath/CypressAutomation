@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "test": "npx cypress run",
+    "cy:run": "node cypress/scripts/runWithHtmlReport.js",
+    "test:chrome": "npx cypress run --spec cypress/e2e/CypressAutomationBasic/XpathDemoTest.cy.js --browser chrome"
+  },
   "dependencies": {
     "convert": "^5.3.0",
     "convert-excel-to-json": "^1.7.0",
