@@ -26,7 +26,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'cypress/results/cypress-mochawesome-reporter',
+                    reportDir: 'cypress/reports/html/.jsons/mochawesome.json',
                     reportFiles: 'index.html',
                     reportName: 'Cypress Mochawesome Report',
                     reportTitles: 'Cypress Test Automation Framework',
