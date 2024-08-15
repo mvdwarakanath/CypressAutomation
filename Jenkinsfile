@@ -1,12 +1,10 @@
 pipeline {
    agent any
-
-   tools {nodejs "nodejs21"}
-
+   tools {nodejs "nodejs22"}
    stages {
        stage('Dependencies') {
            steps {
-                 'npm i'
+                 'npm install'
            }
        }
        stage('e2e Tests') {
