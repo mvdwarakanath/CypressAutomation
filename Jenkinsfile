@@ -4,7 +4,7 @@ pipeline {
    stages {
        stage('Dependencies') {
            steps {
-                 'npm install'
+                sh 'npm i'
            }
        }
        stage('e2e Tests') {
